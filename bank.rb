@@ -30,6 +30,15 @@ class Account
         puts pin_error
       end
     end
+    public
+    def deposit(pin_number, amount)
+      if pin_number == pin
+        @balance += amount
+        puts "Deposited #{amount}. New balance: $#{@balance}."
+      else
+        puts pin_error
+      end
+    end
   end
    
   checking_account = Account.new("Cool Account", 10_000)  
